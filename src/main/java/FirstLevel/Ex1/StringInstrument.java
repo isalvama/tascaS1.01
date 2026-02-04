@@ -1,6 +1,6 @@
-package FirstLevel;
+package FirstLevel.Ex1;
 
-public class StringInstrument extends Instrument{
+public class StringInstrument extends Instrument {
     public StringInstrument(String name, double price){
         super(name, price);
     }

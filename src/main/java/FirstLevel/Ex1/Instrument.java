@@ -1,4 +1,4 @@
-package FirstLevel;
+package FirstLevel.Ex1;
 
 abstract public class Instrument {
     private String name;

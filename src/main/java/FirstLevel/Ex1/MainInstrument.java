@@ -1,4 +1,4 @@
-package FirstLevel;
+package FirstLevel.Ex1;
 
 import java.util.ArrayList;
 

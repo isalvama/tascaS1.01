@@ -6,15 +6,23 @@ abstract public class Instrument {
 
     public Instrument (String name, double price){
         this.name = name;
-        this.price = checkPrice(price);
+        this.price = validatePrice(price);
     }
 
     public abstract String play();
 
-    private double checkPrice(double price) {
+    private double validatePrice(double price) {
         if (price < 0) {
             throw new IllegalArgumentException("The base level weight number must be positive");
         }
+        return price;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public double getPrice(){
         return price;
     }
 

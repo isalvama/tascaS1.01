@@ -1,6 +1,6 @@
-package SecondLevel;
+package SecondLevel.Ex1;
 
-public class Phone {
+ abstract public class Phone {
     private String brand;
     private String model;
 

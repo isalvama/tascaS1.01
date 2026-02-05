@@ -10,7 +10,7 @@ public class MainInstrument {
 
         WindInstrument flute = new WindInstrument("flute", 20);
 
-        PercussionInstrument drum = new PercussionInstrument("drum", 700.00);
+        PercussionInstrument drum = new PercussionInstrument("drum", 700.00, false);
 
         ArrayList<Instrument> instrumentList = new ArrayList<>();
 
@@ -24,6 +24,9 @@ public class MainInstrument {
             System.out.println(instrument + " " + instrument.getName() + " with price " + instrument.getPrice() + " is played like: " + instrument.play());
         }
 
+        System.out.println(PercussionInstrument.getplaysNotes());
+        PercussionInstrument xylophone = new PercussionInstrument("Xylophone", 30, true);
+        System.out.println(xylophone.getplaysNotes());
 
     }
 }

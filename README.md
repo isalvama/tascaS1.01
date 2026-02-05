@@ -24,6 +24,12 @@ src/
                 └── Car.java
                 └── Main.java
         └── SecondLevel
+            └── Ex1
+                └── Phone.java
+                └── Camera.java
+                └── Clock.java
+                └── SmartPhone.java
+                └── Main.java
 
 ## Installation
 1. Clone the repository: git clone <repository-url> // TODO CHANGE
@@ -43,17 +49,17 @@ src/
 ## First Level
 
 ### Ex1: Musical Instruments
-This exercise is designed to understand how inheritance and polymorphism are created and how they work in Java.
+This exercise is designed to understand how inheritance and polymorphism work in Java.
 
 #### Abstract class: Instrument
 Instrument is the abstract class, parent of the rest of the other classes: PercussionInstrument, StringInstrument and WindInstrument.
-'name' and 'price' the abstract's class attributes, and therefore they all the class that inherit from Instrument, will inherit its attributes as well. Both are protected with 'private' modifier and can only be accessed through the Instrument's getters created for both of them.
+'name' and 'price' are the abstract's class attributes, and therefore the child classes of Instrument will inherit its attributes as well. Both are protected with 'private' modifier and can only be accessed through the Instrument's getters created for both of them.
 An abstract method, called play() is declared in Instrument class: all the child classes should therefore implement the method in their own way.
 
 #### Child classes: PercussionInstrument, StringInstrument and WindInstrument
 PercussionInstrument, StringInstrument and WindInstrument inherit from Instrument abstract class, thus they inherit its attributes and should implement the abstract method 'play()' declared in Instrument class.
-In PercussionInstrument, the boolean attribute playsNote is static, thus it belongs to the class and can be accessed by referencing the class and without instancing a PercussionInstrument. A static getter for playsNotes is created in order to access the attribute as it is private.
-In Main file the static attribute has been executed for the first time by calling the class method getter 'PercussionInstrument.getPlaysNotes' and later on when instancing the PercussionInstrument object 'xylophon, in which process the value has been changed to true, as a way to prove the different timings that the static attribute can be executed.
+In PercussionInstrument class, the boolean attribute playsNote is static, thus it belongs to the class and can be accessed by only referencing the class, without need of instancing a PercussionInstrument. A static getter for playsNotes is created in order to access the attribute as it is private.
+In the Main file the static attribute has been executed for the first time by calling the class method getter 'PercussionInstrument.getPlaysNotes' and later on when instancing the PercussionInstrument object 'xylophon', in which process the value has been changed to true, as a way to prove the different timings that the static attribute can be executed.
 
 ### Ex2: Cars
 This exercise is designed to understand the difference between "static" and "final" modificators when assigned to class attributes and how they affect to intialization, instantiation, possible subsequent modification of its values and its belonging to the class or the instance.
@@ -66,9 +72,9 @@ The class Car has three different attributes:
 
 #### Attributes
 In order to deep in the modifiers established for each of the attributes, below we will provide an explanation for each of them:
-- 'brand' is a static attribute, and therefore it belongs to the class. Its value cannot be change once the attribute is initialized as it is a final variable.
+- 'brand' is a static attribute, and therefore it belongs to the class. Its value cannot be changed once the attribute is initialized as it is a final variable.
 - 'model' is a static attribute as well, and therefore it also belongs to the class, not to its instances. However, after being initialized, it can change its value later on.
-- 'power' is a final int attribute, and it belongs to each instance of Car that is created, not to the class, as it is static. However, once the attribute is initialized (either in the class or with the constructor) its value cannot be changed later on.
+- 'power' is a final int attribute, and it belongs to each Car instance created, not to the class, as it is static. However, once the attribute is initialized (either in the class or with the constructor) its value cannot be changed later on.
 
 ##### Which of these attributes can be initialized from the constructor? 
 - 'power' can be initialized in the constructor as it is a non-static attribute, and it doesn't belong to the class but to its instances. As a non-static attribute, 'power' it is created every time Car is instantiated.
@@ -77,14 +83,33 @@ In order to deep in the modifiers established for each of the attributes, below 
 - 'power' and 'brand' attributes, as they are final, once they are initialized its value cannot be changed during the course of the program execution.
 
 ##### Which of these attributes affect all instances in the class?
-- 'brand' and 'model' are static attributes and therefore belong to the class, not to its instances. The static variables are no longer replicated for each object, but they are only "hosted" once in the Car class. Everytime the value of a static attribute that is not final is changed, that affects to the static attribute of the instances, and will then have the new value established for that attribute.
+- 'brand' and 'model' are static attributes and therefore belong to the class, not to its instances. The static variables are no longer replicated for each object, but they are only "hosted" once in the Car class. Every time the value of a static attribute that is not final is changed, that affects to the value's attribute of all of the instances created for that class, and will then have the new value established for that attribute.
 
 
 #### Methods
-Static brake() and accelerate() methods are established in the class. Due to its static nature, both methods can be called without creating an instance of the class, only by calling the class.methodName():
+Static brake() and accelerate() methods are established in the class. Due to its static nature, both methods can be called without creating an instance of the class, only by calling the class (ClassName.methodName()) as shown below (and implemented in Main file):
 - Car.brake();
 - Car.accelerate();
 
-However, the methods can also be called from a created instance of the class, as shown below (and implemented in Main file):
-car1.accelerate();
-car1.brake();
+However, the methods can also be called from a created instance of the class, as it has been done in Main file:
+- car1.accelerate();
+- car1.brake();
+
+## Second Level
+
+### Ex1: Phone
+This exercise is designed to understand how to construct interfaces in Java and learn how they are used by classes.
+
+#### Abstract class: Phone
+Phone is an abstract class, parent of the SmartPhone class. As in real life, all Phones belong to a brand, they are of a specific model and are able to call. Therefore, 'brand' and 'model' are the abstract's class attributes, and therefore are inherited by the child's classes. Both are protected with 'private' modifier and can only be accessed through the Phone's getters created for both of them ('getBrand()' and 'getModel()').
+The class also declares and implements the 'call()' method, as all sub-classes of Phone have the capacity of calling another phone. As a method implemented in the superclass 'Phone', all the child classes inherit from it and throught its instances the method will be able to be called.
+
+#### Interfaces: Camera and Clock
+Two interfaces are created to be implemented by Phone subclasses: Camera and Clock.
+Camera has the capacity if taking a photo thanks to its method takePhoto() and Clock is able to sound an alarm with soundAlarm() method.
+Both methods are abstract: they are only declared in the interfaces and should be implemented by the classes that implement those interfaces.
+
+#### Subclass: SmartPhone
+SmartPhone is a class that inherits from Phone abstract class, thus it inherits its attributes ('brand' and 'model'), and method ('call()').
+SmartPhone implements Camera and Clock interfaces as well: it establishes the implementation of their methods ('soundAlarm()' and 'takePhoto()'), as it is a device that has the capacity of doing so in real life.
+In Main file the subclass 'SmartPhone' that implements both 'Camera' and 'Clock' interfaces is being tested by instancing the object iphoneXS and calling through this instance the interface methods 'takePhoto' and 'soundAlarm()', as well as the superclass method 'call()'.

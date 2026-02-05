@@ -85,6 +85,6 @@ Static brake() and accelerate() methods are established in the class. Due to its
 - Car.brake();
 - Car.accelerate();
 
-However, the methods can also be called from a created instance of the class:
+However, the methods can also be called from a created instance of the class, as shown below (and implemented in Main file):
 car1.accelerate();
 car1.brake();

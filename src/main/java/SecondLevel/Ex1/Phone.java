@@ -9,8 +9,8 @@ package SecondLevel.Ex1;
         this.model = model;
     }
 
-    public String call (int phone){
-        return "This phone is currently calling phone number " + phone;
+    public void call (int phone){
+        System.out.println("This phone is currently calling phone number " + phone);
     }
 
     public String getBrand(){

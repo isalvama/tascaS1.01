@@ -1,8 +1,10 @@
 package FirstLevel.Ex1;
 
 public class StringInstrument extends Instrument {
-    public StringInstrument(String name, double price){
+    private int nStrings;
+    public StringInstrument(String name, double price, int nStrings){
         super(name, price);
+        this.nStrings = nStrings;
     }
 
     @Override

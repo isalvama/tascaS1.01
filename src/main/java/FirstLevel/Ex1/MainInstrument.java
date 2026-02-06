@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class MainInstrument {
     public static void main (String[] args){
-        StringInstrument classicalGuitar = new StringInstrument("classical guitar", 100.00);
-        StringInstrument electricGuitRar = new StringInstrument("electric guitar", 140.00);
-        StringInstrument piano = new StringInstrument("piano", 4000.00);
+        StringInstrument classicalGuitar = new StringInstrument("classical guitar", 100.00, 6);
+        StringInstrument electricGuitRar = new StringInstrument("electric guitar", 140.00, 6);
+        StringInstrument piano = new StringInstrument("piano", 4000.00, 230);
 
         WindInstrument flute = new WindInstrument("flute", 20);
 
@@ -24,9 +24,11 @@ public class MainInstrument {
             System.out.println(instrument + " " + instrument.getName() + " with price " + instrument.getPrice() + " is played like: " + instrument.play());
         }
 
-        System.out.println(PercussionInstrument.getplaysNotes());
+        System.out.println(PercussionInstrument.getPlaysNotes());
         PercussionInstrument xylophone = new PercussionInstrument("Xylophone", 30, true);
-        System.out.println(xylophone.getplaysNotes());
+        System.out.println(xylophone.getPlaysNotes());
+        System.out.println(PercussionInstrument.getPlaysNotes());
+
 
     }
 }

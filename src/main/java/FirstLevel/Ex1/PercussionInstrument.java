@@ -3,9 +3,11 @@ package FirstLevel.Ex1;
 public class PercussionInstrument extends Instrument {
     private static boolean playsNotes = false;
     public PercussionInstrument(String name, double price, boolean playsNotes){
-
         super(name, price);
         PercussionInstrument.playsNotes = playsNotes;
+    }
+    public PercussionInstrument(String name, double price){
+        super(name, price);
     }
 
     @Override
@@ -13,11 +15,11 @@ public class PercussionInstrument extends Instrument {
         return "Està sonant un instrument de percussió";
     }
 
-    public static boolean getplaysNotes(){
+    public static boolean getPlaysNotes(){
         return playsNotes;
     }
 
-    public boolean getplaysNotesInstance(){
+    public boolean getPlaysNotesInstance(){
         return playsNotes;
     }
 }

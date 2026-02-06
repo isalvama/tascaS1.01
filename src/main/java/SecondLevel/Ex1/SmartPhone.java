@@ -7,11 +7,11 @@ public class SmartPhone extends Phone implements Clock, Camera {
 
     @Override
     public void soundAlarm() {
-        System.out.println("Beep beep");
+        System.out.println("This phone is sounding an alarm");
     }
 
     @Override
     public void takePhoto(){
-        System.out.println("click");
+        System.out.println("This phone is taking a photo");
     }
 }

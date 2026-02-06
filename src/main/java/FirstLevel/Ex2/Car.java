@@ -5,16 +5,12 @@ public class Car {
     private static String model = "2026";
     private final int power;
 
-    public Car (int power, String model) {
+    public Car (int power) {
         this.power = power;
     }
-
-    public static void brake(){
-        System.out.println("El vehicle està frenant");
-    }
-
-    public static void accelerate(){
-        System.out.println("El vehicle està accelerant");
+    public Car (int power, String model) {
+        this.power = power;
+        Car.model = model;
     }
 
     public static String getBrand(){
@@ -24,4 +20,11 @@ public class Car {
         return model;
     }
 
+    public static void brake(){
+        System.out.println("El vehicle està frenant");
+    }
+
+    public static void accelerate(){
+        System.out.println("El vehicle està accelerant");
+    }
 }

@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a project created for academic purposes. More specifically, it is created to complete the exercises included in the first Topic of IT ACADEMY Java & Spring especialization phase.
+This is a project created for academic purposes. More specifically, it is created to complete the exercises included in the first Topic of IT ACADEMY Java & Spring specialization phase.
 The indicated exercises are designed to understand how inheritance and polymorphism work in Java.
 
 

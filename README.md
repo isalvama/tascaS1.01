@@ -114,12 +114,12 @@ In order to deep in the modifiers established for each of the attributes, below 
 
 #### Methods
 
-Static 'brake()' and 'accelerate()' methods are established in the class. Due to its static nature, both methods can be called without creating an instance of the class, only by calling the class ('ClassName.methodName()') as shown below (and implemented in Main file):
+'brake()' and 'accelerate()' methods are established in the class. 'brake()' is a static method, and due to its nature, it can be called without creating an instance of the class, only by calling the class ('ClassName.methodName()') as shown below (and implemented in MainCar file):
 - Car.brake();
-- Car.accelerate();
 
+On the other hand, 'accelerate()' method is not static, and therefore it can be called only by an instance of its class Car.
 
-However, the methods can also be called from a created instance of the class, as it has been done in Main file:
+Static methods can also be called from a created instance of the class, as it has been done in MainCar file:
 - car1.accelerate();
 - car1.brake();
 
@@ -133,7 +133,7 @@ This exercise is designed to understand how to construct interfaces in Java and 
 
 #### Abstract class: Phone
 
-Phone is an abstract class, parent of SmartPhone subclass. As in real life, all phones belong to a brand, they are of a specific model and able to call. Therefore, 'brand' and 'model' are the abstract's class attributes, and therefore are inherited by the child's classes. Both are protected with 'private' modifier and can only be accessed through the Phone's getters created for both of them ('getBrand()' and 'getModel()').
+Phone is an abstract class, parent of SmartPhone subclass. As in real life, all phones belong to a brand, they are of a specific model and able to call. Therefore, 'BRAND' and 'model' are the abstract's class attributes, and therefore are inherited by the child's classes. Both are protected with 'private' modifier and can only be accessed through the Phone's getters created for both of them ('getBrand()' and 'getModel()').
 The class also declares and implements the 'call()' method, as all subclasses of 'Phone' have the capacity of calling another phone. As a method implemented in the superclass 'Phone', all the child classes inherit from it and through its instances the method can be called.
 
 

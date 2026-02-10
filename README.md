@@ -115,7 +115,7 @@ In order to deep in the modifiers established for each of the attributes, below 
 #### Methods
 
 Static 'brake()' and 'accelerate()' methods are established in the class. Due to its static nature, both methods can be called without creating an instance of the class, only by calling the class ('ClassName.methodName()') as shown below (and implemented in Main file):
-- Car.brake();[ConsoleReaderMain.java](../TascaS1.02/src/main/java/SecondLevel/Ex2/ConsoleReaderMain.java)
+- Car.brake();
 - Car.accelerate();
 
 

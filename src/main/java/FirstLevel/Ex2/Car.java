@@ -1,7 +1,7 @@
 package FirstLevel.Ex2;
 
 public class Car {
-    private static final String brand = "Toyota";
+    private static final String BRAND = "Toyota";
     private static String model = "2026";
     private final int power;
 
@@ -14,7 +14,7 @@ public class Car {
     }
 
     public static String getBrand(){
-        return brand;
+        return BRAND;
     }
     public static String getModel(){
         return model;
@@ -24,7 +24,7 @@ public class Car {
         System.out.println("El vehicle està frenant");
     }
 
-    public static void accelerate(){
+    public void accelerate(){
         System.out.println("El vehicle està accelerant");
     }
 }

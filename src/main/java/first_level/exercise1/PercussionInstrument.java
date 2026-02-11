@@ -1,4 +1,4 @@
-package FirstLevel.Ex1;
+package first_level.exercise1;
 
 public class PercussionInstrument extends Instrument {
     private static boolean playsNotes = false;

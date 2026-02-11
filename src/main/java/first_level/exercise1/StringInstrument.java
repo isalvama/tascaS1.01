@@ -1,4 +1,4 @@
-package FirstLevel.Ex1;
+package first_level.exercise1;
 
 public class StringInstrument extends Instrument {
     private int nStrings;

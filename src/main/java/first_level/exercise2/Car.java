@@ -1,4 +1,4 @@
-package FirstLevel.Ex2;
+package first_level.exercise2;
 
 public class Car {
     private static final String BRAND = "Toyota";

@@ -1,4 +1,4 @@
-package FirstLevel.Ex2;
+package first_level.exercise2;
 
 public class MainCar {
     public static void main (String[] args){

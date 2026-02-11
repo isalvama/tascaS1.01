@@ -1,4 +1,4 @@
-package SecondLevel.Ex1;
+package second_level.exercise1;
 
 public class Main {
     public static void main(String[] args){

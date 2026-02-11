@@ -1,4 +1,4 @@
-package FirstLevel.Ex1;
+package first_level.exercise1;
 
 public class WindInstrument extends Instrument {
     public WindInstrument(String name, double price){

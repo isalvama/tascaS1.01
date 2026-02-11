@@ -13,28 +13,30 @@ The indicated exercises are designed to understand how inheritance and polymorph
 
 
 ## Project Structure
-TascaS1.01
+```
+TascaS1.01/
 src/
- └── main/
-     └── java/
-         └── FirstLevel
-            └── Ex1
-                └── Instrument.java
-                └── MainInstrument.java
-                └── PercussionInstrument.java
-                └── StringInstrument.java
+└── main/
+    └── java/
+       └── first_level/
+            └── exercici1/
+                ├── Instrument.java
+                ├── MainInstrument.java
+                ├── PercussionInstrument.java
+                ├── StringInstrument.java
                 └── WindInstrument.java
-            └── Ex2
-                └── Car.java
+            └── exercici2/
+                ├── Car.java
+                ├── Main.java
+        └── second_level/
+            └── exercici1/
+                ├── Phone.java
+                ├── Camera.java
+                ├── Clock.java
+                ├── SmartPhone.java
                 └── Main.java
-        └── SecondLevel
-            └── Ex1
-                └── Phone.java
-                └── Camera.java
-                └── Clock.java
-                └── SmartPhone.java
-                └── Main.java
-
+            
+```
 
 ## Installation
 

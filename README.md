@@ -1,4 +1,4 @@
-# Tasca S1 01
+# Sprint 1.1: Inheritance & Polymorphism
 
 ## Description
 
